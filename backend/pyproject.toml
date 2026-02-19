@@ -1,0 +1,27 @@
+[project]
+name = "mis-gastos-personales-backend"
+version = "0.0.1"
+description = "Backend FastAPI para Mis Gastos Personales"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115",
+  "uvicorn[standard]>=0.30",
+  "firebase-admin>=6.5",
+  "pydantic>=2.7",
+  "python-dotenv>=1.0",
+  "ruff>=0.6",
+]
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["app"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
